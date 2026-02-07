@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Воронка — B2B Лидогенерация</title>
+  <meta name="description" content="Привлекаем клиентов в B2B без рекламы и SEO">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: white;
+      color: #000;
+      line-height: 1.5;
+    }
+    
+    main {
+      max-width: 672px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 8px;
+    }
+    
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 48px;
+      }
+    }
+    
+    .subtitle {
+      font-size: 12px;
+      color: rgba(0,0,0,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 32px;
+    }
+    
+    .hero-text {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-text {
+        font-size: 24px;
+      }
+    }
+    
+    .hero-description {
+      font-size: 16px;
+      color: rgba(0,0,0,0.7);
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    
+    section {
+      margin-bottom: 32px;
+    }
+    
+    h2 {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(0,0,0,0.5);
+      margin-bottom: 16px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    ul li {
+      font-size: 16px;
+      color: rgba(0,0,0,0.7);
+      margin-bottom: 8px;
+    }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    
+    .grid-2 > div {
+      font-size: 16px;
+      color: rgba(0,0,0,0.7);
+    }
+    
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    
+    @media (min-width: 768px) {
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+    }
+    
+    .process-item {
+      font-size: 14px;
+    }
+    
+    .process-item strong {
+      display: block;
+    }
+    
+    .process-item p {
+      color: rgba(0,0,0,0.6);
+      margin-top: 4px;
+    }
+    
+    .full-width {
+      grid-column: 1 / -1;
+    }
+    
+    .pilot-card {
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .pilot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .pilot-label {
+      font-size: 12px;
+      color: rgba(0,0,0,0.5);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    
+    .pilot-value {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    
+    .pilot-value-small {
+      font-size: 14px;
+      color: rgba(0,0,0,0.7);
+    }
+    
+    .price {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .guarantee {
+      color: rgba(0,0,0,0.5);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    
+    .note {
+      font-size: 12px;
+      color: rgba(0,0,0,0.5);
+    }
+    
+    .kpi-box {
+      font-size: 14px;
+      color: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.02);
+      padding: 12px;
+    }
+    
+    .tags {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    
+    .target-text {
+      font-size: 14px;
+      color: rgba(0,0,0,0.7);
+    }
+    
+    .important-list li {
+      font-size: 14px;
+      color: rgba(0,0,0,0.6);
+      margin-bottom: 4px;
+    }
+    
+    .important-text {
+      font-size: 14px;
+      color: rgba(0,0,0,0.8);
+    }
+    
+    .cta-box {
+      background: #000;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+    
+    .cta-box h2 {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    
+    @media (min-width: 768px) {
+      .cta-box h2 {
+        font-size: 24px;
+      }
+    }
+    
+    .cta-box p {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #000;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px 24px;
+    }
+    
+    .cta-note {
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+      margin-top: 16px;
+    }
+    
+    footer {
+      border-top: 1px solid rgba(0,0,0,0.1);
+      padding: 16px 20px;
+    }
+    
+    .footer-content {
+      max-width: 672px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Header -->
+    <div style="margin-bottom: 32px;">
+      <h1>Воронка</h1>
+      <p class="subtitle">АГЕНТСТВО</p>
+    </div>
+
+    <!-- Что делаем -->
+    <section>
+      <p class="hero-text">Привлекаем клиентов в B2B без рекламы и SEO.</p>
+      <p class="hero-description">Находим конкретных людей в конкретных компаниях и приводим их в диалог с вашим отделом продаж.</p>
+    </section>
+
+    <!-- Проблема -->
+    <section>
+      <h2>Проблема</h2>
+      <ul>
+        <li>Стоимость лида постоянно растёт</li>
+        <li>Качество заявок падает</li>
+        <li>Вы не контролируете, кто к вам придёт</li>
+        <li>Некоторые продукты вообще не ищут</li>
+      </ul>
+    </section>
+
+    <!-- Решение -->
+    <section>
+      <h2>Решение</h2>
+      <p style="font-size: 18px; color: rgba(0,0,0,0.8); margin-bottom: 16px;">Вместо ожидания заявок - сами находим потенциальных клиентов:</p>
+      <div class="grid-2">
+        <div>Собственники</div>
+        <div>Генеральные директора</div>
+        <div>Руководители отделов</div>
+        <div>Группы ЛПРов</div>
+      </div>
+      <p style="font-size: 16px; color: rgba(0,0,0,0.7);">Передаём людей, которые уже согласны на диалог.</p>
+    </section>
+
+    <!-- Как работает -->
+    <section>
+      <h2>Как работает</h2>
+      <div class="process-grid">
+        <div class="process-item">
+          <strong>1. Анализируем бизнес</strong>
+          <p>Разбираемся в продукте и клиенте</p>
+        </div>
+        <div class="process-item">
+          <strong>2. Формируем гипотезы</strong>
+          <p>Должности, компании, мотивы</p>
+        </div>
+        <div class="process-item">
+          <strong>3. Собираем контакты</strong>
+          <p>Открытые источники и OSINT</p>
+        </div>
+        <div class="process-item">
+          <strong>4. Выходим на контакт</strong>
+          <p>Авто или ручные сообщения</p>
+        </div>
+        <div class="process-item full-width">
+          <strong>5. Передаём результат</strong>
+          <p>Контакты + история коммуникации</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Пилот -->
+    <section>
+      <h2>Пилотный запуск</h2>
+      <div class="pilot-card">
+        <div class="pilot-grid">
+          <div>
+            <p class="pilot-label">Срок</p>
+            <p class="pilot-value">3 недели</p>
+          </div>
+          <div>
+            <p class="pilot-label">KPI</p>
+            <p class="pilot-value-small">700 исходящих · 3 гипотезы · 7 лидов</p>
+          </div>
+        </div>
+        <p class="price">90 000 ₽</p>
+        <p class="guarantee">Гарантия возврата 50% суммы, если KPI не выполнен</p>
+        <p class="note" style="margin-bottom: 16px;">Передаём все наработки</p>
+      </div>
+      <p class="kpi-box">KPI рассчитан исходя из минимальной конверсии в нашем опыте</p>
+    </section>
+
+    <!-- Для кого -->
+    <section>
+      <h2>Для кого</h2>
+      <p class="tags">ИТ · Аутсорсинг · Производство · Услуги</p>
+      <p class="target-text">Максимальный эффект для тех, кто продаёт собственникам и директорам.</p>
+    </section>
+
+    <!-- Важно -->
+    <section>
+      <h2>Важно понимать</h2>
+      <ul class="important-list">
+        <li>Не гарантируем сделки</li>
+        <li>Не продаём базы</li>
+        <li>Не заменяем отдел продаж</li>
+      </ul>
+      <p class="important-text" style="margin-top: 12px;">Создаём управляемый канал привлечения клиентов.</p>
+    </section>
+
+    <!-- CTA -->
+    <section style="margin-bottom: 32px;">
+      <div class="cta-box">
+        <h2>Хотите увидеть кейсы?</h2>
+        <p>Все цифры, диалоги и разборы — в Telegram</p>
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="cta-button">Перейти в Telegram</a>
+        <p class="cta-note">Бесплатно · Без подписки</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <span>© 2026 Воронка</span>
+      <span>Москва</span>
+    </div>
+  </footer>
+</body>
+</html>
